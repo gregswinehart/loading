@@ -1,0 +1,64 @@
+<style type="text/css">
+
+
+.background img {
+  width: 100%;
+  height: 100%;
+}
+
+.background.loading {
+  height: 420px;
+  width: 490px;
+  padding: 10px;
+}
+.loading {
+  position: relative;
+  background-color: #e2e2e2;
+}
+
+.loading::before {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin-top: -10px;
+  transform: translateX(-100%);
+  background: -webkit-gradient(linear, left top,
+  right top, from(transparent),
+  color-stop(rgba(255, 255, 255, .5)),
+  to(transparent));
+
+  background: linear-gradient(90deg, transparent,
+  rgba(255, 255, 255, .5), transparent);
+
+  animation: loading 1.2s infinite;
+}
+
+@keyframes loading {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+</style>
+
+<div style="text-align: -webkit-center;">
+
+<div class="background loading">
+  <img src="dynamicUI.svg">
+</div>
+<br>
+<div class="background loading">
+  <img src="table.svg">
+</div>
+<br>
+<div class="background loading">
+  <img src="plot-1.svg">
+</div>
+<br>
+<div class="background loading">
+  <img src="plot-2.svg">
+</div>
+
+</div>
